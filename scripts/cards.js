@@ -24,3 +24,23 @@ const initialCards = [
       link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
     }
 ];
+
+const cardsContainer = document.querySelector('.places__list');
+const cardTemplate = document.querySelector('#card-template').content;
+
+// Clone template and return it filled with info from array above
+
+function createCard(cardInfo) {
+    const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
+    cardElement.querySelector(".card__image").src = cardInfo.link;
+    cardElement.querySelector(".card__title").textContent = cardInfo.name;
+
+    return cardElement;
+}
+
+// Render Card
+
+initialCards.forEach(function (cardInfo) {
+    console.log(cardInfo);
+    cardsContainer.append(createCard(cardInfo));
+});
