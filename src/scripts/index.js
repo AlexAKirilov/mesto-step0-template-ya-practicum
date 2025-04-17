@@ -1,3 +1,5 @@
+import '../pages/index.css';
+
 // @todo: Темплейт карточки
 
 const cardsContainer = document.querySelector('.places__list');
