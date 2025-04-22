@@ -1,3 +1,19 @@
 .popup__form {
   margin-top: 27px;
 }
+
+.form__input-error_active {
+  color: #FF0000;
+  font-size: 12px;
+}
+
+.form__input-error_empty {
+  width: 1px; /* если у элемента не будет размеров, некоторые браузеры посчитают, что его вообще нет */
+  height: 1px;
+  overflow: hidden; /* без этого свойства тоже сработает, но так наверняка. Мы его ещё изучим, оно скрывает элементы, выходящие за границы родителя */
+  clip-path: inset(0 0 0 0);
+}
+
+.form__submit_inactive {
+  
+}
